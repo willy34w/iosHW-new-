@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,960 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iosHW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="電影院" translatesAutoresizingMaskIntoConstraints="NO" id="vUY-EW-Ef9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cU-4H-lGt">
+                                <rect key="frame" x="42" y="330" width="290" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.52970254920000004" green="0.72222222219999999" blue="0.4177909239" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="近期電影介紹"/>
+                                <connections>
+                                    <segue destination="AkE-EX-KMb" kind="show" id="fQx-D6-XMf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-2242.4000000000001" y="-72.413793103448285"/>
+        </scene>
+        <!--普遍級-->
+        <scene sceneID="v4B-o1-Te7">
+            <objects>
+                <tableViewController id="zdJ-mg-xaI" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="271-wN-dhJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="mB6-Rh-YXZ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="idt-RM-Oge">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="idt-RM-Oge" id="HUn-pJ-bKG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="凸槌特派員：三度出擊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4h-hL-lT1">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ocI-cS-4vR" kind="show" id="FRR-I7-oui"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="h0y-6d-arv">
+                                        <rect key="frame" x="0.0" y="89" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h0y-6d-arv" id="jDJ-Rk-sub">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="李宗偉：敗者為王" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyj-YU-sLz">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Jdz-Qf-YE8" kind="show" id="tj3-8w-ukd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="zdJ-mg-xaI" id="PLd-lc-pnS"/>
+                            <outlet property="delegate" destination="zdJ-mg-xaI" id="jbz-7s-W6S"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="普遍級" id="tFw-28-Qxv"/>
+                    <navigationItem key="navigationItem" title="普遍級" id="jaZ-AI-IJx"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Teo-wG-dct" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118" y="-759"/>
+        </scene>
+        <!--凸搥特派員 ： 三度出擊-->
+        <scene sceneID="caf-oq-mu4">
+            <objects>
+                <tableViewController id="ocI-cS-4vR" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GGY-iT-JfH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="5pd-Ww-UZC">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="237" id="2S5-qU-OHR">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2S5-qU-OHR" id="SZj-6M-5le">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="凸搥特派員" translatesAutoresizingMaskIntoConstraints="NO" id="gcf-Oz-df4">
+                                                    <rect key="frame" x="109" y="18" width="157" height="201"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="219" id="6A1-EH-hw9">
+                                        <rect key="frame" x="0.0" y="237" width="375" height="219"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6A1-EH-hw9" id="eMJ-Rj-zk4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="218.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TmN-RI-cfU">
+                                                    <rect key="frame" x="16" y="11" width="343" height="195"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">導 演 ： 
+
+大衛克爾(David Kerr)
+
+演 員 ： 
+
+歐嘉柯瑞蘭蔻(Olga Kurylenko), 羅溫艾金森(Rowan Atkinson), 艾瑪湯普遜(Emma Thompson), 傑克拉齊(Jake Lacy), 班奈特米勒(Bennett Miller)
+
+片 長 ： 89分
+
+級 別 ： 普遍級</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="375" id="GTH-Y5-xCe">
+                                        <rect key="frame" x="0.0" y="456" width="375" height="375"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GTH-Y5-xCe" id="9GC-fJ-yNk">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5JG-Dn-fJf">
+                                                    <rect key="frame" x="16" y="-2" width="343" height="378"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <mutableString key="text">電影簡介 ：         《凸搥特派員:三度出擊》敘述英國陷入史無前例的危機。英國首相在第一次舉辦G12高峰會的五天前，軍情七處的保安系統就遭到入侵，每一名值勤特務的身分都曝光。尋獲嫌犯的唯一希望就是找回一名早已退休的老特務，但是他們大部份不是早就掛了，就是快要掛了，於是軍情七處的處長只剩下一名人選，他的名字就是英格力…強尼英格力。強尼英格力接到通知後，毅然決然地放棄他身為小學老師的工作，接下這項艱難的任務，但是他在上次出任務之後，軍情七處有了很大的改變：槍械和道具被智慧手機取代，跑車則被電動車取代。
+ 
+        英格力一開始感到無所適從，但是他很快就找到打破這些全新規則的方法，他向軍情七處的處長解釋，為了逮到這名高竿的電腦駭客，就必須使用老舊的情報裝備。於是他就選中了一輛骨董級的奧斯頓馬丁跑車，挖出一套鋼骨裝以及一雙磁力靴，再加上糖粉追蹤器和棉花棒炸藥，並且從軍情七處的地下室把他忠心耿耿的跟班大寶找回來，凸搥特派員強尼英格力就此展開他的全新任務。</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ocI-cS-4vR" id="rKU-1o-FeM"/>
+                            <outlet property="delegate" destination="ocI-cS-4vR" id="2Zx-D6-zoE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="凸搥特派員 ： 三度出擊" id="LkN-Xa-Ren">
+                        <barButtonItem key="backBarButtonItem" title="電影列表" id="bp1-sV-8V9"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yir-JN-ONf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119" y="-1444"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="c8c-8h-Wrp">
+            <objects>
+                <navigationController id="AkE-EX-KMb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="9ON-nL-WOF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7VI-yO-rBt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rWs-57-WEy" kind="relationship" relationship="rootViewController" id="NmQ-k7-1Ha"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DF0-fq-WCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1546" y="-72"/>
+        </scene>
+        <!--輔12級-->
+        <scene sceneID="tQT-rk-vhW">
+            <objects>
+                <tableViewController id="0Nu-f7-VAv" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O1T-ET-uRW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="fst-Uy-s8k">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="It4-nL-6xg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="It4-nL-6xg" id="Fky-bq-z6X">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="猛毒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlP-3j-dU4">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="94p-dB-AwY" kind="show" id="mcR-8d-3UY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="RLk-qX-R0I">
+                                        <rect key="frame" x="0.0" y="89" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RLk-qX-R0I" id="isu-sG-yaj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="人肉搜索" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2p-f5-geM">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WoP-eh-hVZ" kind="show" id="Peh-wo-aZ9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="CvP-Cn-VHd">
+                                        <rect key="frame" x="0.0" y="178" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CvP-Cn-VHd" id="LYa-bF-Eg8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="一屍到底" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAn-ky-XZ9">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="D9m-ZK-TUL" kind="show" id="zMh-A8-Efa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="0Nu-f7-VAv" id="alW-i8-3BZ"/>
+                            <outlet property="delegate" destination="0Nu-f7-VAv" id="bWz-an-B9a"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="輔12級" id="ViR-QB-ao1"/>
+                    <navigationItem key="navigationItem" title="輔12級" id="BpH-uy-rjV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBF-ue-kXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="-72"/>
+        </scene>
+        <!--輔15級-->
+        <scene sceneID="T0q-zM-Hmv">
+            <objects>
+                <tableViewController id="6Ah-KK-tUd" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9x6-oS-MUP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="xUF-mw-kQv">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="i19-NE-RKx">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i19-NE-RKx" id="120-e4-L9O">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="一個巨星的誕生" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsN-pi-9X3">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Sqs-e0-0dO" kind="show" id="13k-SZ-CAB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="6Ah-KK-tUd" id="Xvw-kR-9hr"/>
+                            <outlet property="delegate" destination="6Ah-KK-tUd" id="3id-8A-FKf"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="輔15級" id="Sog-dw-FBj"/>
+                    <navigationItem key="navigationItem" title="輔15級" id="zBP-ql-242"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ka9-Xp-fnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="695"/>
+        </scene>
+        <!--目錄-->
+        <scene sceneID="nM5-US-O9n">
+            <objects>
+                <tableViewController id="rWs-57-WEy" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4DN-yq-Omc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="cyg-u7-PMZ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="Nc7-3d-6Ab">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nc7-3d-6Ab" id="bPy-ZW-rJv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="電影列表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqI-Wr-XWt">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qyi-1G-Tre" kind="show" id="wSU-aK-RPM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="UYn-rh-GKR">
+                                        <rect key="frame" x="0.0" y="89" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UYn-rh-GKR" id="5c1-x2-fhY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="基隆電影院列表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd7-p4-B2h">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="aTn-03-eQm" kind="show" id="mNI-Kr-YiW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="rWs-57-WEy" id="5Mx-yY-LJ6"/>
+                            <outlet property="delegate" destination="rWs-57-WEy" id="BMM-as-Ujn"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="目錄" id="bls-2W-fPq"/>
+                    <navigationItem key="navigationItem" title="目錄" id="7Mk-Kz-9Dc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MX2-rx-B0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-833" y="-72"/>
+        </scene>
+        <!--電影列表-->
+        <scene sceneID="0ws-Q3-4yC">
+            <objects>
+                <tabBarController id="qyi-1G-Tre" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="電影列表" id="lqT-I4-ReG"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="klH-37-hHc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="zdJ-mg-xaI" kind="relationship" relationship="viewControllers" id="rbJ-6b-tUF"/>
+                        <segue destination="0Nu-f7-VAv" kind="relationship" relationship="viewControllers" id="wWd-BL-tzY"/>
+                        <segue destination="6Ah-KK-tUd" kind="relationship" relationship="viewControllers" id="1Ni-1B-9Q0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HTn-ka-8fv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118" y="-72"/>
+        </scene>
+        <!--李宗偉 ： 敗者為王-->
+        <scene sceneID="sOZ-1h-azd">
+            <objects>
+                <tableViewController id="Jdz-Qf-YE8" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sAq-Vz-zpY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="Oqg-Mo-6OM">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="237" id="eSD-7E-t7l">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eSD-7E-t7l" id="jXk-MP-LNW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="敗者為王" translatesAutoresizingMaskIntoConstraints="NO" id="5Lf-VN-tNT">
+                                                    <rect key="frame" x="109" y="18" width="157" height="201"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="219" id="mJ8-fK-k6j">
+                                        <rect key="frame" x="0.0" y="237" width="375" height="219"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mJ8-fK-k6j" id="CuA-G6-PA2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="218.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sWv-Ff-y32">
+                                                    <rect key="frame" x="16" y="11" width="343" height="195"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">導 演 ： 
+
+馬逸騰
+
+演 員 ： 
+
+黃煒傑, 曾冠源, 潘思慧, 李國煌, 楊雁雁, 羅斯嚴諾, 王駿, 邱文博, 徐凱, 彭建偉
+
+片 長 ： 125分
+
+級 別 ： 普遍級</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="375" id="0tj-8c-UCE">
+                                        <rect key="frame" x="0.0" y="456" width="375" height="375"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0tj-8c-UCE" id="BqJ-wj-Src">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gM3-L5-PP3">
+                                                    <rect key="frame" x="16" y="-2" width="343" height="378"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <mutableString key="text">       ★李宗偉，世界羽毛球界四大天王之一，也是歷史上第一位連續三屆奧運男單選手，2008、2012、2016年連續三屆奧運羽毛球男單亞軍。 ★改編自大馬羽壇一哥李宗偉真人真事！ 1992年，在北馬大山腳，只有10歲的李宗偉（黃煒杰 飾）偷偷跟隨父親到附近的咖啡廳觀看球賽，心裡起了潛移默化的作用，並立下志向想成為一名國手：「有一天，我想代表馬來西亞打球！」卻遭到父親（李國煌 飾）反對要其專心唸書。 儘管家境不好，李宗偉也能化腐朽為神奇，暗自利用廚房裡的器具如平底鍋等做為球拍，再到羽球館幫忙穿補球拍線以換取羽球，便開始參加大山腳各大比賽，成績不俗，大山腳著名教練鄭炳發（王駿 飾）此時留意到，並收他為徒，逐漸在大山腳累積名氣後，更有幸被發掘而進入國家羽球學院。 在國家羽球學院裡，李宗偉（曾冠源 飾）被人稱魔鬼教練的米斯本（拿督羅斯嚴諾 飾）訓練，過程中遇到了黃妙珠（潘思慧 飾），開始了他們的愛情故事。訓練進步神速下，李宗偉很快成為了國家代表，卻分別在湯杯預算賽2004、香港公開賽2004以及全英賽2006被中國勁敵林丹打敗，心情受挫、試圖重振旗鼓之際， 2006年馬來西亞公開賽來臨，第三局，李宗偉13分，林丹領先獲得20分，再一分林丹就奪金，氣力幾近放盡，卻在此時，被世人堪稱為奇蹟的比賽，即將驚豔全場…。</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Jdz-Qf-YE8" id="jQ4-Mh-pz2"/>
+                            <outlet property="delegate" destination="Jdz-Qf-YE8" id="UYT-mC-VaZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="李宗偉 ： 敗者為王" id="zGx-Gc-lfK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6M-VG-xub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="-1444"/>
+        </scene>
+        <!--猛毒-->
+        <scene sceneID="016-N5-mPq">
+            <objects>
+                <tableViewController id="94p-dB-AwY" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Uv-Ly-4nJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="T5f-iO-M2p">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="237" id="hK4-eo-8I9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hK4-eo-8I9" id="yno-c3-fbl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image=" 猛毒" translatesAutoresizingMaskIntoConstraints="NO" id="7YU-xP-zNn">
+                                                    <rect key="frame" x="109" y="18" width="157" height="201"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="219" id="vZX-qD-gRz">
+                                        <rect key="frame" x="0.0" y="237" width="375" height="219"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vZX-qD-gRz" id="nf5-ue-6nT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="218.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="usV-1k-DXq">
+                                                    <rect key="frame" x="16" y="11" width="343" height="195"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">導 演 ： 
+
+魯賓弗萊舍
+
+演 員 ： 
+
+湯姆哈迪(Tom Hardy), 蜜雪兒威廉斯(Michelle Williams), 伍迪哈里遜(Woody Harrelson), 湯姆霍蘭德(Tom Holland)
+
+片 長 ： 113分
+
+級 別 ： 輔導十二歲級</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="375" id="zdG-HW-OUS">
+                                        <rect key="frame" x="0.0" y="456" width="375" height="375"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zdG-HW-OUS" id="Kxc-UJ-5ku">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sUH-xb-Nwj">
+                                                    <rect key="frame" x="16" y="-2" width="343" height="378"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">       最新電影《猛毒》由《屍樂園》的魯賓弗來舍執導，並找來《黑暗騎士：黎明昇起》英倫男星湯姆哈迪、《大娛樂家》蜜雪兒威廉斯與《星際大戰外傳：俠盜一號》里茲阿邁德等重量級卡司組成黃金陣容，自《蜘蛛人3》出現就備受關注的最強宿敵「猛毒」身為外星有機生命體，需尋找宿主結合才能生存，能賦予宿主超越想像的強大能量，亦正亦邪的角色特質更讓「猛毒」成為漫威漫畫裡最受歡迎的角色之一。</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="94p-dB-AwY" id="kNC-y2-Ac9"/>
+                            <outlet property="delegate" destination="94p-dB-AwY" id="66k-Zn-zoB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="猛毒" id="bf0-xa-Doi"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hya-VE-hur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="-760"/>
+        </scene>
+        <!--人肉搜索-->
+        <scene sceneID="QK5-P4-ClC">
+            <objects>
+                <tableViewController id="WoP-eh-hVZ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ocj-Se-loC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="boT-74-CCw">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="237" id="4xy-8r-J3f">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4xy-8r-J3f" id="jjl-Ix-Cl4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="人肉搜索" translatesAutoresizingMaskIntoConstraints="NO" id="EvV-MO-cV6">
+                                                    <rect key="frame" x="109" y="18" width="157" height="201"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="219" id="5ny-ga-SX6">
+                                        <rect key="frame" x="0.0" y="237" width="375" height="219"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5ny-ga-SX6" id="heU-3E-I8t">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="218.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bvs-cW-uMW">
+                                                    <rect key="frame" x="16" y="11" width="343" height="195"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">導 演 ： 
+
+阿尼許夏干提(Aneesh Chaganty)
+
+演 員 ： 
+
+周約翰(John Cho), 米雪兒拉(Michelle La), 戴博拉梅西(Debra Messing) 
+片 長 ： 102分
+
+級 別 ： 輔導十二歲級</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="375" id="h4H-Uo-z6B">
+                                        <rect key="frame" x="0.0" y="456" width="375" height="375"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h4H-Uo-z6B" id="ZjC-N1-eCI">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iwn-6F-IyR">
+                                                    <rect key="frame" x="16" y="-2" width="343" height="378"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <mutableString key="text">       一名父親（周約翰飾）在十六歲女兒離奇失蹤之後，登入女兒的電腦，試圖透過臉書、Instagram與信箱等記錄的蛛絲馬跡來拼湊真相。沒想到在搜尋的過程中，他卻意外發現許多女兒不為人知的一面，這才驚覺她早已和自己所認知的模樣相差甚遠。整體失蹤案件亦曝光在社會及社群的高度關注中，然而就在警方調查毫無進展、看似走投無路之際，傷心欲絕的父親也發現越來越多可疑證據。他該如何才能憑藉網路科技的力量找出真兇、挽救即將失去的一切呢？索尼影業全新電影《人肉搜索》由新銳導演阿尼許夏干提執導、《星際爭霸戰》周約翰主演，更找來恐怖驚悚電影《弒訊》團隊加入製作。全片大膽以電腦視訊畫面呈現，更將最貼近現代人的科技網路等議題以前所未見的角度呈現。新穎的拍攝手法與劇情設定不僅拿下日舞影展NEXT單元觀眾票選獎，首波媒體試映亦獲得「媲美恐怖大師希區考特」、「創新手法的完美傑作」等好評激推，且爛番茄指數更是飆上100滿分，打造今年必看的驚悚片經典。台灣將於9月21日躍上大銀幕，見證網路世界、眼見不為憑。</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="WoP-eh-hVZ" id="xK1-3o-53J"/>
+                            <outlet property="delegate" destination="WoP-eh-hVZ" id="70B-Zg-TuA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="人肉搜索" id="5yU-Ih-rpG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0lW-Kx-3Zi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="-72"/>
+        </scene>
+        <!--一屍到底-->
+        <scene sceneID="KRJ-vG-thD">
+            <objects>
+                <tableViewController id="D9m-ZK-TUL" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jaj-co-t83">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="a89-1s-b6K">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="237" id="KGk-sB-3xz">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGk-sB-3xz" id="Rem-ha-aMJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="一屍到底" translatesAutoresizingMaskIntoConstraints="NO" id="L5T-rq-fqa">
+                                                    <rect key="frame" x="109" y="18" width="157" height="201"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="219" id="Dha-JX-ZRw">
+                                        <rect key="frame" x="0.0" y="237" width="375" height="219"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dha-JX-ZRw" id="Bug-PJ-Qaw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="218.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="O4L-ex-rpI">
+                                                    <rect key="frame" x="16" y="11" width="343" height="195"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">導 演 ： 
+
+演 員 ： 
+
+片 長 ： 96分
+
+級 別 ： 輔導十二歲級</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="375" id="lCa-fX-2Ns">
+                                        <rect key="frame" x="0.0" y="456" width="375" height="375"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lCa-fX-2Ns" id="iL2-92-l4P">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qoj-oP-FCd">
+                                                    <rect key="frame" x="16" y="-2" width="343" height="378"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <mutableString key="text">       ★ 2018 義大利遠東電影節 ★ 2018 紐約亞洲電影節 ★ 2018 捷克卡羅維瓦利國際影展 ★ 2018 英國倫敦恐怖電影節 ★ 2018 蒙特婁奇幻影展 ★ 2018 巴西Fantaspoa 國際奇幻影展最佳國際影片 ★ 2018 韓國富川國際奇幻電影節 ★ 2018 幕張國際奇幻影展觀眾票選獎 ★ 2018 西班牙錫切斯奇幻影展 ★ 2018 洛杉磯日本電影節最佳影片 ★ 口碑狂潮席捲全日本，票房突破16億日幣，持續增加中！ ★ 「攝影機」現象攻佔各大媒體，日本年度最熱話題電影 電影結束後千萬別離席，故事才正要開始…… 一名瘋狂導演與可憐的劇組們，正在山中的一座廢墟中拍攝一部低成本的殭屍電影。追求逼真效果的導演，怎麼拍都不滿意……沒想到真正的殭屍卻現身撲向劇組成員！在如此糟糕的狀況中，導演卻認為這是意外的禮物，當劇組人員一個個變成殭屍時，導演決定要拍出一部「37分鐘一鏡到底的殭屍生存戰」電影……</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="D9m-ZK-TUL" id="21q-AR-G3J"/>
+                            <outlet property="delegate" destination="D9m-ZK-TUL" id="iTu-pi-4jQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="一屍到底" id="5FO-o3-Z6y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCb-Bg-yUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="695"/>
+        </scene>
+        <!--一個巨星的誕生-->
+        <scene sceneID="9fw-dX-Wx8">
+            <objects>
+                <tableViewController id="Sqs-e0-0dO" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v0s-8y-NE5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="deo-0q-lob">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="237" id="Jrt-Py-o8O">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jrt-Py-o8O" id="0qD-8j-MOz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="一個巨星的誕生" translatesAutoresizingMaskIntoConstraints="NO" id="HAL-1E-2L4">
+                                                    <rect key="frame" x="109" y="18" width="157" height="201"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="219" id="yeg-ZU-tVv">
+                                        <rect key="frame" x="0.0" y="237" width="375" height="219"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yeg-ZU-tVv" id="gIB-SP-GHa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="218.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-Tf-dy2">
+                                                    <rect key="frame" x="16" y="11" width="343" height="195"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">導 演 ： 
+
+布萊德利古柏(Bradley Cooper)
+
+演 員 ： 
+
+女神卡卡(Lady Gaga), 布萊德利古柏(Bradley Cooper)
+
+片 長 ： 136分
+
+級 別 ： 輔導十五歲級</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="375" id="LmX-8t-jwY">
+                                        <rect key="frame" x="0.0" y="456" width="375" height="375"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LmX-8t-jwY" id="kWF-Sh-YcX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6V4-g2-gLS">
+                                                    <rect key="frame" x="16" y="-2" width="343" height="378"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <mutableString key="text">       《一個巨星的誕生》由四度奧斯卡獎入圍者布萊德利庫柏（《美國狙擊手》、《瞞天大佈局》、《派特的幸福劇本》），以及囊括各大音樂獎且曾獲奧斯卡獎提名的流行樂巨星女神卡卡主演。這是女神卡卡第一次在大型商業片中領銜演出，而且是布萊德利庫柏首度執導演筒的電影。
+       在這個全新詮釋的悲劇愛情故事中，鄉村音樂家傑克森梅恩（布萊德利庫柏 飾）發掘了正在努力熬出頭的素人艾莉（女神卡卡 飾），當時她正要放棄成為歌手的夢想，但傑克森說動她進入演藝界，也在共事的過程中愛上她。不久艾莉的事業起飛，但傑克森卻克服不了他由來已久的心魔，使兩人的關係開始崩裂。
+ 
+       主要卡司也包括安德魯席佛斯坦（即安德魯戴斯克萊）、戴夫查普爾和山姆艾里歐特。
+ 
+       女神卡卡曾因《獵場》中的歌曲〈Til It Happens to You〉入圍奧斯卡獎，而在這部新片裡，她除了飾演艾莉，還會演唱原創歌曲，這些歌曲是由她跟布萊德利庫柏和幾位藝人一起創作，包括盧卡斯尼爾森（Lukas Nelson）、傑森伊斯貝爾（Jason Isbell）和馬克朗森（Mark Ronson）。所有音樂都是原創和現場錄音。 
+       《一個巨星的誕生》由比爾葛伯、強彼得斯、布萊德利庫柏、陶德菲利普斯和琳妮特霍威爾泰勒擔任製片人，貝索伊旺尼克、麥可拉皮諾、海瑟帕里和拉維梅塔擔任監製。編劇是威爾費特斯、布萊德利庫柏和艾瑞克羅斯，改編自1954年莫斯哈特（Moss Hart）所寫的電影劇本及1976年約翰古格里鄧尼（John Gregory Dunne）與瓊蒂蒂安（Joan Didion）和法蘭克皮爾森（Frank Pierson）所寫的電影劇本，以及改編自威廉威爾曼（William A. Wellman）和羅伯卡森（Robert Carson）所寫的故事。</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Sqs-e0-0dO" id="urD-jU-KaE"/>
+                            <outlet property="delegate" destination="Sqs-e0-0dO" id="YWe-5e-ZUB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="一個巨星的誕生" id="aru-Cv-IUc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8x-AS-ezb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="1410"/>
+        </scene>
+        <!--基隆電影院列表-->
+        <scene sceneID="Pg2-h7-aRg">
+            <objects>
+                <tableViewController id="aTn-03-eQm" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gl7-fS-8tF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="JBl-Bc-KMf">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="ubu-jN-f8P">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ubu-jN-f8P" id="xvh-HE-2iM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="基隆秀泰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Bb-PPp">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="EI6-c7-7yu" kind="show" id="FiW-Lf-BmV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="aTn-03-eQm" id="9qH-4n-vZU"/>
+                            <outlet property="delegate" destination="aTn-03-eQm" id="Dli-f7-e8u"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="輔15級" id="ZvX-VZ-gm2"/>
+                    <navigationItem key="navigationItem" title="基隆電影院列表" id="Cax-1z-DZ7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GjI-MY-MMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-834" y="695"/>
+        </scene>
+        <!--基隆秀泰-->
+        <scene sceneID="HE0-OZ-UKF">
+            <objects>
+                <tableViewController id="EI6-c7-7yu" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="c9b-Hk-hnG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="Qrc-cy-wR8">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="459" id="4xw-SL-URf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="459"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4xw-SL-URf" id="1E9-0x-efA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="458.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yqk-7W-p3B">
+                                                    <rect key="frame" x="16" y="4" width="343" height="450"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <mutableString key="text">影城名稱 ： 基隆秀泰 
+地址 ： 基隆市信一路177號 
+聯絡電話 ： (02)2421-2388 
+廳數 ： 8廳 
+總座位數 ： 1033 
+交通方式 ： 
+近基隆火車站，往文化中心步行約10分鐘。
+
+公車 ：  市政府站下車(101、103、104、105、107、108、109、201、202、203、204、205)步行約3分鐘。 
+特色 ： 
+旗艦級的尊榮定位，斥資上億元鉅額，時尚華麗的空間享受。8座超豪華影廳，1033個舒適座椅，更多廳更多選擇。全新數位3D放映技術搭配杜比環繞音響系統，超環繞，超震撼﹗量身訂做影廳座椅，符合人體工學，久坐更舒適，座位前後排間距加寬，觀賞視線無障礙。最齊全的餐飲美食，香濃爆米花，可樂，熱狗堡，吉拿棒等新鮮提供，看電影不必出遠門，基隆在地最便利的選擇，便宜又划算﹗</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="EI6-c7-7yu" id="avt-tV-UQe"/>
+                            <outlet property="delegate" destination="EI6-c7-7yu" id="aW3-zO-IvC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="基隆秀泰" id="LtE-Uh-lXQ">
+                        <barButtonItem key="backBarButtonItem" title="基隆電影院列表" id="WSX-6F-Nqt"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CcS-pB-B6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-834.39999999999998" y="1408.2458770614694"/>
         </scene>
     </scenes>
+    <resources>
+        <image name=" 猛毒" width="280" height="400"/>
+        <image name="一個巨星的誕生" width="271" height="400"/>
+        <image name="一屍到底" width="280" height="400"/>
+        <image name="人肉搜索" width="280" height="400"/>
+        <image name="凸搥特派員" width="270" height="400"/>
+        <image name="敗者為王" width="277" height="400"/>
+        <image name="電影院" width="749" height="535"/>
+    </resources>
 </document>
